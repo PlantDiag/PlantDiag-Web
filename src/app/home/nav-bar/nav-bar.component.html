@@ -1,9 +1,14 @@
-<div>
-    <div>
-        Accordeon com opções(Historio, ir para a parte de enviar uma foto e a home com status da utlima analise)
-    </div>
-    <div>
-        <span>Nome Usuario</span>
-        <p-button label="Logout" severity="danger"/> 
-    </div>
-</div>
+<nav class="nav-bar">
+    <!-- <p-drawer [(visible)]="visible" class=" " header="Drawer">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.
+    </p>
+</p-drawer> -->
+<!-- <p-button (click)="visible = true"/> -->
+  <div class="user-info">
+    <span class="username">Olá, {{ nomeUsuario }}</span>
+  </div>
+  <button pButton type="button" label="Logout" icon="pi pi-sign-out" class="p-button-sm logout-btn"></button>
+</nav>

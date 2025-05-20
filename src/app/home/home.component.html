@@ -1,4 +1,39 @@
 <app-nav-bar></app-nav-bar>
-<!-- TODO -->
-<div>Filtro para o grafico</div>
-<div>Grafico para as plantas cadastradas por exemplo mostrar o status para a plantação de milho mostrando </div>
+
+<div class="p-4">
+  <!-- Filtro para o gráfico -->
+  <p-panel header="Filtro para o Gráfico">
+    <div class="filtro-container" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+      <p-dropdown [(ngModel)]="culturaSelecionada" placeholder="Selecione a cultura" style="flex: 1 1 200px;">
+      </p-dropdown>
+      <!-- 
+      <p-calendar 
+        [(ngModel)]="dataInicio" 
+        placeholder="Data Início" 
+        style="flex: 1 1 200px;">
+      </p-calendar>
+
+      <p-calendar 
+        [(ngModel)]="dataFim" 
+        placeholder="Data Fim" 
+        style="flex: 1 1 200px;">
+      </p-calendar> -->
+    </div>
+  </p-panel>
+
+  <!-- Gráfico para status da plantação -->
+  <p-panel header="Status da Plantação - Milho" class="mt-4">
+    <div style="display: flex; justify-content: center; align-items: center; height: 400px;">
+      <p-chart type="bar" [data]="dadosGrafico" style="width: 100%; max-width: 800px;">
+      </p-chart>
+    </div>
+  </p-panel>
+  <p-panel>
+    <div class="camera">
+      <p-button label="Abrir camera" (click)="visible = true "/>
+      @if (visible) {
+        <webcam></webcam>
+      }
+    </div>
+  </p-panel>
+</div>
